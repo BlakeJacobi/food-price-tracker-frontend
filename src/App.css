@@ -1,0 +1,153 @@
+.App {
+  display: flex; /* Use flexbox for the layout */
+  min-height: 100vh; /* Ensure the App takes the full height of the page */
+}
+
+.sidebar {
+  width: 250px; /* Set the width of the sidebar */
+  background-color: #f4f4f4; /* Add a background color to distinguish the sidebar */
+  padding: 20px; /* Optional: Add some padding */
+  height: 100vh; /* Ensure the sidebar takes the full height of the page */
+  position: fixed; /* This ensures it stays on the left side even when scrolling */
+  left: 0; /* Align sidebar to the left */
+  top: 0; /* Ensure the sidebar starts from the top */
+  bottom: 0; /* Ensure the sidebar stretches to the bottom */
+}
+
+.App-main {
+  margin-left: 250px; /* Create space on the left for the sidebar */
+  padding: 20px; /* Add some padding for the main content */
+  flex-grow: 1; /* Allow the main content to grow and take remaining space */
+  height: 100vh; /* Ensure the main content area takes up the full height of the viewport */
+  display: flex;
+  flex-direction: column; /* Allow flex children (like header) to align vertically */
+  box-sizing: border-box;
+}
+
+.App-header {
+  background-color: #76d6f4;
+  flex: 0 1 auto; /* Prevent the header from growing and pushing content down */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.sidebar-logo {
+  width: 100%;  /* Make the logo take the full width of the sidebar */
+  max-width: 200px; /* Limit the width of the logo to a maximum size */
+  height: auto; /* Maintain aspect ratio */
+  display: block;
+  margin: 0 auto 20px; /* Center the logo and add margin at the bottom */
+}
+.sidebar-menu {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  gap: 10px; /* Add spacing between buttons */
+}
+
+.sidebar-button {
+  background-color: #f4f4f4; /* Neutral background */
+  color: #333; /* Dark text color */
+  border: none; /* Remove default border */
+  padding: 10px 15px; /* Add padding for clickable area */
+  text-align: left; /* Align text to the left for a clean look */
+  border-radius: 5px; /* Rounded corners for a modern design */
+  cursor: pointer; /* Show pointer cursor on hover */
+  font-size: 16px; /* Make the text readable */
+  font-weight: bold; /* Bold text for emphasis */
+  transition: all 0.3s ease; /* Smooth transitions */
+}
+
+.sidebar-button:hover {
+  background-color: #dcdcdc; /* Change background on hover */
+  color: #000; /* Slightly darker text on hover */
+  transform: scale(1.02); /* Subtle scale effect on hover */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+}
+
+.sidebar-button:active {
+  transform: scale(0.98); /* Slightly shrink on click */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Reduce shadow on click */
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 700px; /* Extend the maximum width */
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  overflow: hidden; /* Ensures content stays within the rounded border */
+}
+
+.search-bar {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+}
+
+.search-button {
+  background-color: #ffffff;
+  border: none;
+  color: rgb(53, 50, 50);
+  padding: 0 15px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* Ensure the button matches the height of the parent container */
+  box-sizing: border-box; /* Include padding and border in the element's height/width */
+}
+
+.search-button:hover {
+  background-color: #d5d5d5;
+}
+
+.search-button:focus {
+  outline: none;
+}
+
+.updates-box {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  max-width: 600px; /* Set a maximum width */
+}
+
+.updates-box h3 {
+  margin: 0 0 10px;
+  color: #333;
+}
+
+.updates-box p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.updates-box ul {
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+.updates-box ul li {
+  font-size: 14px;
+  color: #555;
+}
